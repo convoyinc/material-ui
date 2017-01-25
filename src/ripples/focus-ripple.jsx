@@ -1,5 +1,5 @@
 let React = require('react');
-let PureRenderMixin = React.addons.PureRenderMixin;
+let PureRenderMixin = require('react-addons-pure-render-mixin');
 let StylePropable = require('../mixins/style-propable');
 let AutoPrefix = require('../styles/auto-prefix');
 let Colors = require('../styles/colors');

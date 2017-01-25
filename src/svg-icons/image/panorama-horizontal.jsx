@@ -1,5 +1,5 @@
 const React = require('react');
-const PureRenderMixin = React.addons.PureRenderMixin;
+const PureRenderMixin = require('react-addons-pure-render-mixin');
 const SvgIcon = require('../../svg-icon');
 
 const ImagePanoramaHorizontal = React.createClass({
