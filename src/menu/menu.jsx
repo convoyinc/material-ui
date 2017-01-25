@@ -1,4 +1,5 @@
 let React = require('react');
+let ReactDOM = require('react-dom');
 let CssEvent = require('../utils/css-event');
 let KeyLine = require('../utils/key-line');
 let KeyCode = require('../utils/key-code');
@@ -52,7 +53,7 @@ let NestedMenuItem = React.createClass({
 
   componentDidMount() {
     this._positionNestedMenu();
-    let el = this.getDOMNode();
+    let el = ReactDOM.findDOMNode(this);
     el.focus();
   },
 
