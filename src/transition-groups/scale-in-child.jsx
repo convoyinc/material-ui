@@ -1,4 +1,5 @@
-const React = require('react/addons');
+const React = require('react');
+const ReactDOM = require('react-dom');
 const StylePropable = require('../mixins/style-propable');
 const AutoPrefix = require('../styles/auto-prefix');
 const Transitions = require('../styles/transitions');
@@ -39,7 +40,7 @@ const ScaleInChild = React.createClass({
   },
 
   componentWillLeave(callback) {
-    let style = React.findDOMNode(this).style;
+    let style = ReactDOM.findDOMNode(this).style;
 
     style.opacity = '0';
     AutoPrefix.set(style, 'transform', 'scale(' + this.props.minScale + ')');
@@ -72,14 +73,14 @@ const ScaleInChild = React.createClass({
   },
 
   _animate() {
-    let style = React.findDOMNode(this).style;
+    let style = ReactDOM.findDOMNode(this).style;
 
     style.opacity = '1';
     AutoPrefix.set(style, 'transform', 'scale(' + this.props.maxScale + ')');
   },
 
   _initializeAnimation(callback) {
-    let style = React.findDOMNode(this).style;
+    let style = ReactDOM.findDOMNode(this).style;
 
     style.opacity = '0';
     AutoPrefix.set(style, 'transform', 'scale(0)');

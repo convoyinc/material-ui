@@ -1,5 +1,6 @@
-let React = require('react/addons');
-let PureRenderMixin = React.addons.PureRenderMixin;
+let React = require('react');
+const ReactDOM = require('react-dom');
+let PureRenderMixin = require('react-addons-pure-render-mixin');
 let StylePropable = require('../mixins/style-propable');
 let AutoPrefix = require('../styles/auto-prefix');
 let Colors = require('../styles/colors');
@@ -86,7 +87,7 @@ let FocusRipple = React.createClass({
   _pulsate() {
     if (!this.isMounted()) return;
 
-    let innerCircle = React.findDOMNode(this.refs.innerCircle);
+    let innerCircle = ReactDOM.findDOMNode(this.refs.innerCircle);
     if (!innerCircle) return;
 
     let startScale = 'scale(1)';
@@ -103,7 +104,7 @@ let FocusRipple = React.createClass({
   },
 
   _setRippleSize() {
-    let el = React.findDOMNode(this.refs.innerCircle);
+    let el = ReactDOM.findDOMNode(this.refs.innerCircle);
     let height = el.offsetHeight;
     let width = el.offsetWidth;
     let size = Math.max(height, width);
