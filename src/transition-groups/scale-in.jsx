@@ -1,4 +1,4 @@
-const React = require('react/addons');
+const React = require('react');
 const ReactTransitionGroup = React.addons.TransitionGroup;
 const StylePropable = require('../mixins/style-propable');
 const ScaleInChild = require('./scale-in-child');

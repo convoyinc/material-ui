@@ -1,4 +1,4 @@
-let React = require('react/addons');
+let React = require('react');
 let PropTypes = require('../utils/prop-types');
 let StylePropable = require('../mixins/style-propable');
 let Typography = require('../styles/typography');
