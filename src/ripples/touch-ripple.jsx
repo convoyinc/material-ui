@@ -1,4 +1,5 @@
 let React = require('react');
+const ReactDOM = require('react-dom');
 let StylePropable = require('../mixins/style-propable');
 let Dom = require('../utils/dom');
 let RippleCircle = require('./circle-ripple');
@@ -144,7 +145,7 @@ let TouchRipple = React.createClass({
 
   _getRippleStyle(e) {
     let style = {};
-    let el = React.findDOMNode(this);
+    let el = ReactDOM.findDOMNode(this);
     let elHeight = el.offsetHeight;
     let elWidth = el.offsetWidth;
     let offset = Dom.offset(el);

@@ -1,4 +1,5 @@
 let React = require('react');
+const ReactDOM = require('react-dom');
 let ColorManipulator = require('../utils/color-manipulator');
 let StylePropable = require('../mixins/style-propable');
 let Colors = require('../styles/colors');
@@ -319,7 +320,7 @@ let ListItem = React.createClass({
 
   applyFocusState(focusState) {
     let button = this.refs.enhancedButton;
-    let buttonEl = React.findDOMNode(button);
+    let buttonEl = ReactDOM.findDOMNode(button);
 
     if (button) {
       switch(focusState) {

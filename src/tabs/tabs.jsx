@@ -1,4 +1,5 @@
 let React = require('react');
+const ReactDOM = require('react-dom');
 let cloneWithProps = require('react-addons-clone-with-props');
 let TabTemplate = require('./tabTemplate');
 let InkBar = require('../ink-bar');
@@ -35,7 +36,7 @@ let Tabs = React.createClass({
   getEvenWidth(){
     return (
       parseInt(window
-        .getComputedStyle(React.findDOMNode(this))
+        .getComputedStyle(ReactDOM.findDOMNode(this))
         .getPropertyValue('width'), 10)
     );
   },
