@@ -151,7 +151,7 @@ let DatePickerDialog = React.createClass({
   },
 
   _handleDialogDismiss() {
-    CssEvent.onTransitionEnd(this.refs.dialog, () => {
+    CssEvent.onTransitionEnd(ReactDOM.findDOMNode(this.refs.dialog), () => {
       this.setState({
         isCalendarActive: false,
         showMonthDayPicker: true,
@@ -162,7 +162,7 @@ let DatePickerDialog = React.createClass({
   },
 
   _handleDialogClickAway() {
-    CssEvent.onTransitionEnd(this.refs.dialog, () => {
+    CssEvent.onTransitionEnd(ReactDOM.findDOMNode(this.refs.dialog), () => {
       this.setState({
         isCalendarActive: false,
         showMonthDayPicker: true,

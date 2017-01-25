@@ -303,8 +303,8 @@ let Dialog = React.createClass({
     if (this.state.open) {
       let clientHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
       let container = ReactDOM.findDOMNode(this);
-      let dialogWindow = this.refs.dialogWindow;
-      let dialogContent = this.refs.dialogContent;
+      let dialogWindow = ReactDOM.findDOMNode(this.refs.dialogWindow);
+      let dialogContent = ReactDOM.findDOMNode(this.refs.dialogContent);
       let minPaddingTop = 16;
 
       //Reset the height in case the window was resized.

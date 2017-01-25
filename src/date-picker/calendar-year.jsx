@@ -80,7 +80,7 @@ let CalendarYear = React.createClass({
     if (this.refs.selectedYearButton === undefined) return;
 
     let container = ReactDOM.findDOMNode(this);
-    let yearButtonNode = this.refs.selectedYearButton;
+    let yearButtonNode = ReactDOM.findDOMNode(this.refs.selectedYearButton);
 
     let containerHeight = container.clientHeight;
     let yearButtonNodeHeight = yearButtonNode.clientHeight || 32;
