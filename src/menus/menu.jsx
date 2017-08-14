@@ -1,6 +1,6 @@
 let React = require('react');
 const ReactDOM = require('react-dom');
-let update = require('react-addons-update');
+let update = require('immutability-helper');
 let Controllable = require('../mixins/controllable');
 let StylePropable = require('../mixins/style-propable');
 let AutoPrefix = require('../styles/auto-prefix');

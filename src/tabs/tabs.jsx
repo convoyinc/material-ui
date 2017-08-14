@@ -1,6 +1,5 @@
 let React = require('react');
 const ReactDOM = require('react-dom');
-let cloneWithProps = require('react-addons-clone-with-props');
 let TabTemplate = require('./tabTemplate');
 let InkBar = require('../ink-bar');
 let StylePropable = require('../mixins/style-propable');
@@ -106,7 +105,7 @@ let Tabs = React.createClass({
           tabContent.push(undefined);
         }
 
-        return cloneWithProps(tab, {
+        return React.cloneElement(tab, {
           key: index,
           selected: this.state.selectedIndex === index,
           tabIndex: index,
