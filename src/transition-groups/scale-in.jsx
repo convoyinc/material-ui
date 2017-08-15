@@ -1,5 +1,5 @@
 const React = require('react');
-const ReactTransitionGroup = require('react-transition-group/TransitionGroup');
+const ReactTransitionGroup = require('react-addons-transition-group');
 const StylePropable = require('../mixins/style-propable');
 const ScaleInChild = require('./scale-in-child');
 

@@ -1,10 +1,11 @@
 let React = require('react');
 const ReactDOM = require('react-dom');
 let StylePropable = require('./mixins/style-propable');
-let Draggable = require('react-draggable2');
+// disabling to unblock react 15 update
+// let Draggable = require('react-draggable2');
 let Transitions = require('./styles/transitions');
 let FocusRipple = require('./ripples/focus-ripple');
-
+/* eslint-disable */
 
 /**
   * Verifies min/max range.
@@ -221,6 +222,8 @@ let Slider = React.createClass({
   },
 
   render() {
+    // disabling this component to unblock react 15 update. We shouldn't be adding MUI components anyways.
+    throw new Error('slider has been disabled due to package compatibilty issues.');
     let { ...others } = this.props;
     let percent = this.state.percent;
     if (percent > 1) percent = 1; else if (percent < 0) percent = 0;
@@ -289,18 +292,11 @@ let Slider = React.createClass({
           <div ref="track" style={trackStyles}>
               <div style={filledStyles}></div>
               <div style={remainingStyles}></div>
-              <Draggable axis="x" bound="point"
-                cancel={this.props.disabled ? '*' : null}
-                start={{x: (percent * 100) + '%'}}
-                constrain={this._constrain()}
-                onStart={this._onDragStart}
-                onStop={this._onDragStop}
-                onDrag={this._onDragUpdate}
-                onMouseDown={this._onMouseDownKnob}>
-                  <div style={handleStyles} tabIndex={0}>
-                    {focusRipple}
-                  </div>
-              </Draggable>
+              {
+                /*
+                  dear reader, this component does nothing. Removed draggable to unblock react 15 upgrade. 
+                */
+              }
             </div>
         </div>
         <input ref="input" type="hidden"

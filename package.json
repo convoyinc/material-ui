@@ -28,15 +28,14 @@
   },
   "homepage": "http://material-ui.com/",
   "dependencies": {
-    "classnames": "^1.2.0",
-    "react-draggable2": "^0.5.1"
+    "classnames": "^1.2.0"
   },
   "peerDependencies": {
     "react": ">=15.0.0",
     "react-dom": ">=15.0.0",
     "react-tap-event-plugin": ">=1.0.0",
     "react-addons-pure-render-mixin": ">=15.0.0",
-    "react-transition-group": ">=1.2.0",
+    "react-addons-transition-group": ">=15.0.0",
     "immutability-helper": ">=2.0.0"
   },
   "devDependencies": {
