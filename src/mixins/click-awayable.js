@@ -1,4 +1,3 @@
-let React = require('react');
 const ReactDOM = require('react-dom');
 let Events = require('../utils/events');
 let Dom = require('../utils/dom');
