@@ -107,7 +107,7 @@ let Calendar = React.createClass({
         opacity: '0.5',
         height: 12,
         fontWeight: '500',
-        margin: 0,
+        margin: '1px 0 0 0', // 1px of top margin fixes the bug at 110% zoom
       },
       weekTitleDay: {
         listStyle: 'none',
