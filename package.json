@@ -42,7 +42,7 @@
     "babel": "^5.4.3",
     "babel-eslint": "^3.1.17",
     "escope": "^3.3.0",
-    "eslint": "^0.23.0",
+    "eslint": "^7.7.0",
     "eslint-plugin-react": "^2.5.2",
     "gulp": "^3.9.0",
     "gulp-eslint": "^0.15.0",
